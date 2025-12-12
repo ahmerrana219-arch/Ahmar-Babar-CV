@@ -1,0 +1,167 @@
+/* Custom CSS for Professional Resume */
+
+:root {
+    --primary-color: #007BFF; /* A professional blue */
+    --secondary-color: #333;
+    --background-color: #f4f7f6;
+    --text-color: #555;
+    --header-bg: #2c3e50; /* Darker, sophisticated header */
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.resume-container {
+    display: flex;
+    max-width: 1100px;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Header & Title Styling */
+.header {
+    background-color: var(--header-bg);
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    grid-column: 1 / -1; /* Spans across both columns */
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+.header .title {
+    margin: 5px 0 0;
+    font-size: 1.2em;
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+/* Sidebar Styling (Contact/Skills) */
+.contact-sidebar {
+    width: 300px;
+    background-color: #eaf1f7; /* Light blue/gray sidebar */
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.contact-sidebar h2 {
+    color: var(--header-bg);
+    font-size: 1.3em;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.contact-sidebar h2 .fas {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.contact-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.contact-sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.contact-sidebar ul li .fas {
+    margin-right: 8px;
+    color: var(--primary-color);
+}
+
+.skills-list li {
+    padding: 5px 0;
+}
+
+.contact-sidebar hr {
+    border: 0;
+    border-top: 1px solid #c0c0c0;
+    margin: 20px 0;
+}
+
+/* Main Content Styling (Experience/Education) */
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    color: var(--primary-color);
+    font-size: 1.8em;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.section h2 .fas {
+    margin-right: 10px;
+}
+
+.job-entry, .education-entry {
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border-left: 3px solid var(--primary-color);
+}
+
+.job-entry h3, .education-entry h3 {
+    margin: 0;
+    font-size: 1.3em;
+    color: var(--secondary-color);
+}
+
+.job-entry .date, .education-entry .date {
+    font-size: 0.9em;
+    color: #999;
+    margin-top: 5px;
+    display: block;
+}
+
+.job-entry ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.job-entry li {
+    margin-bottom: 5px;
+    font-size: 0.95em;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+    .resume-container {
+        flex-direction: column;
+    }
+
+    .contact-sidebar {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+}
