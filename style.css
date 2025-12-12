@@ -1,148 +1,164 @@
-/* Custom CSS for Professional Resume */
+/* MODERN TWO-COLUMN RESUME THEME */
 
 :root {
-    --primary-color: #007BFF; /* A professional blue */
-    --secondary-color: #333;
-    --background-color: #f4f7f6;
-    --text-color: #555;
-    --header-bg: #2c3e50; /* Darker, sophisticated header */
-    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --sidebar-bg: #212529; /* Dark Sidebar Background (Near black) */
+    --accent-color: #007bff; /* Primary Blue Accent */
+    --text-light: #f8f9fa;
+    --text-dark: #343a40;
+    --body-bg: #e9ecef; /* Light gray background */
+    --font-family: 'Roboto', sans-serif;
 }
 
 body {
     font-family: var(--font-family);
     line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--background-color);
+    background-color: var(--body-bg);
     margin: 0;
-    padding: 20px;
+    padding: 30px 0;
     display: flex;
     justify-content: center;
 }
 
 .resume-container {
     display: flex;
-    max-width: 1100px;
-    width: 100%;
-    background: #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 900px;
+    max-width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     overflow: hidden;
 }
 
-/* Header & Title Styling */
-.header {
-    background-color: var(--header-bg);
-    color: #fff;
-    padding: 30px;
-    text-align: center;
-    grid-column: 1 / -1; /* Spans across both columns */
-}
-
-.header h1 {
-    margin: 0;
-    font-size: 2.5em;
-    font-weight: 600;
-}
-
-.header .title {
-    margin: 5px 0 0;
-    font-size: 1.2em;
-    font-weight: 300;
-    opacity: 0.8;
-}
-
-/* Sidebar Styling (Contact/Skills) */
-.contact-sidebar {
-    width: 300px;
-    background-color: #eaf1f7; /* Light blue/gray sidebar */
-    padding: 30px;
+/* -------------------- SIDEBAR STYLES -------------------- */
+.sidebar {
+    width: 35%;
+    background-color: var(--sidebar-bg);
+    color: var(--text-light);
+    padding: 40px 30px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
-.contact-sidebar h2 {
-    color: var(--header-bg);
-    font-size: 1.3em;
-    border-bottom: 2px solid var(--primary-color);
+.sidebar h2 {
+    color: var(--accent-color);
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-top: 0;
+    border-bottom: 2px solid var(--accent-color);
     padding-bottom: 5px;
-    margin-top: 20px;
-    margin-bottom: 15px;
-}
-
-.contact-sidebar h2 .fas {
-    margin-right: 10px;
-    color: var(--primary-color);
-}
-
-.contact-sidebar ul {
-    list-style: none;
-    padding: 0;
     margin-bottom: 20px;
 }
 
-.contact-sidebar ul li {
-    margin-bottom: 10px;
+.contact-item {
+    margin-bottom: 12px;
+    font-size: 0.95em;
 }
 
-.contact-sidebar ul li .fas {
-    margin-right: 8px;
-    color: var(--primary-color);
+.contact-item .fas, .contact-item .fab {
+    margin-right: 10px;
+    color: var(--accent-color);
 }
 
-.skills-list li {
-    padding: 5px 0;
-}
-
-.contact-sidebar hr {
-    border: 0;
-    border-top: 1px solid #c0c0c0;
-    margin: 20px 0;
-}
-
-/* Main Content Styling (Experience/Education) */
-.main-content {
-    flex-grow: 1;
-    padding: 30px;
-}
-
-.section {
+.skills-section {
     margin-bottom: 30px;
 }
 
-.section h2 {
-    color: var(--primary-color);
-    font-size: 1.8em;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+.skills-list {
+    list-style: none;
+    padding: 0;
 }
 
-.section h2 .fas {
+.skills-list li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+/* -------------------- MAIN CONTENT STYLES -------------------- */
+.main-content {
+    width: 65%;
+    background-color: white;
+    padding: 40px 50px;
+    color: var(--text-dark);
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.header .title {
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #6c757d;
+    margin-top: 5px;
+}
+
+.separator {
+    border: 0;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 20px 0 0;
+}
+
+.section {
+    margin-bottom: 35px;
+}
+
+.section-title {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.section-title .fas {
     margin-right: 10px;
 }
 
+/* Job/Education Entry Styles */
 .job-entry, .education-entry {
-    margin-bottom: 20px;
-    padding-left: 15px;
-    border-left: 3px solid var(--primary-color);
+    margin-bottom: 25px;
+}
+
+.job-header, .edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 5px;
 }
 
 .job-entry h3, .education-entry h3 {
+    font-size: 1.2em;
+    font-weight: 700;
     margin: 0;
-    font-size: 1.3em;
-    color: var(--secondary-color);
 }
 
-.job-entry .date, .education-entry .date {
+.company, .institution {
+    font-weight: 400;
+    color: #6c757d;
+}
+
+.date {
+    font-style: italic;
+    color: #6c757d;
     font-size: 0.9em;
-    color: #999;
-    margin-top: 5px;
-    display: block;
 }
 
 .job-entry ul {
-    margin-top: 10px;
+    list-style: disc;
     padding-left: 20px;
+    margin-top: 10px;
 }
 
 .job-entry li {
@@ -150,18 +166,31 @@ body {
     font-size: 0.95em;
 }
 
-/* Responsive Design */
-@media (max-width: 800px) {
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
     .resume-container {
         flex-direction: column;
+        max-width: 100%;
+        box-shadow: none;
     }
-
-    .contact-sidebar {
+    .sidebar, .main-content {
         width: 100%;
         padding: 20px;
     }
-
+    .sidebar {
+        border-radius: 8px 8px 0 0;
+    }
     .main-content {
-        padding: 20px;
+        border-radius: 0 0 8px 8px;
+    }
+    .job-header, .edu-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .date {
+        margin-top: 5px;
     }
 }
